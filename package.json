@@ -1,0 +1,45 @@
+{
+  "name": "middle-request",
+  "version": "1.0.0",
+  "author": "xiaodingdang",
+  "description": "一个通用的接口请求类",
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "umd": "./dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "rollup -c -w --bundleConfigAsCjs",
+    "build": "cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "lib": "npm run clean && npm run build",
+    "tsc": "tsc -p ./tsconfig.json"
+  },
+  "dependencies": {
+    "uri-js": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.15.0",
+    "rollup-plugin-polyfill-node": "^0.12.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangzong12/middle-request.git"
+  },
+  "homepage": "https://github.com/huangzong12/middle-request#readme",
+  "private": false,
+  "license": "MIT"
+}
